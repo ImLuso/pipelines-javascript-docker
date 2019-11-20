@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: imlusopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: imlusopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: imlusopipelinesjavascriptdocker 
+          image: luisgscontainerregistry.azurecr.io/imlusopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
